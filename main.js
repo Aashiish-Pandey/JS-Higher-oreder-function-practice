@@ -48,14 +48,24 @@ console.log(eightiesCompnany);
 //map() method ,create array of company name
 
 const companyName = companies.map((company) => company.name);
-console.log(companyName);
+//console.log(companyName);
 
 const temp = companies.map((company) => {
   return `${company.name} [${company.start}- ${company.end}]`;
 });
-console.log(temp);
+//console.log(temp);
 
 
 const ageTimesTwo = ages.map(age=>age*2)
-console.log(ageTimesTwo
-  )
+//console.log(ageTimesTwo
+  
+
+//sort() method 
+// sorting according to companies start date
+const sortedCompanies = companies.sort((c1,c2) => c1.start - c2.start)
+console.log(sortedCompanies)
+
+//sort age
+
+sortedAge = ages.sort((a,b) => a-b)
+console.log(sortedAge)
