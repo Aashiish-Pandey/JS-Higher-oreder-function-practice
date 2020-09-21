@@ -56,21 +56,18 @@ const temp = companies.map((company) => {
 });
 //console.log(temp);
 
-
-const ageTimesTwo = ages.map(age=>age*2)
+const ageTimesTwo = ages.map((age) => age * 2);
 //console.log(ageTimesTwo
-  
 
-//sort() method 
+//sort() method
 // sorting according to companies start date
-const sortedCompanies = companies.sort((c1,c2) => c1.start - c2.start)
+const sortedCompanies = companies.sort((c1, c2) => c1.start - c2.start);
 //console.log(sortedCompanies)
 
 //sort age
 
-sortedAge = ages.sort((a,b) => a-b)
+sortedAge = ages.sort((a, b) => a - b);
 //console.log(sortedAge)
-
 
 //Reduce Method
 // sum of age
@@ -83,10 +80,23 @@ sortedAge = ages.sort((a,b) => a-b)
 // }
 // console.log(ageSum)
 
-let ageSum = ages.reduce((startValue,arrElmnt) => startValue+arrElmnt,0)
-console.log(ageSum)
+let ageSum = ages.reduce((startValue, arrElmnt) => startValue + arrElmnt, 0);
+//console.log(ageSum)
 
-// get total Years of all companies  
+// get total Years of all companies
 
-const totalYears = companies.reduce((startValue,company) => startValue +(company.end-company.start),0 )
-console.log(totalYears)
+const totalYears = companies.reduce(
+  (startValue, company) => startValue + (company.end - company.start),
+  0
+);
+//console.log(totalYears)
+
+// combining all methods ::
+
+const combined = ages
+  .map((age) => age * 2)
+  .filter((age) => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined);
