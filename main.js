@@ -30,12 +30,13 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 100, 32];
 // console.log(canDrink)
 
 canDrink = ages.filter((age) => age > 21);
+//
 console.log(canDrink);
 
 //Filter Retail companyies:
 
 retailComp = companies.filter((company) => company.category === "Retail");
-console.log(retailComp);
+//console.log(retailComp);
 
 // 80's companies
 
@@ -63,9 +64,21 @@ const ageTimesTwo = ages.map(age=>age*2)
 //sort() method 
 // sorting according to companies start date
 const sortedCompanies = companies.sort((c1,c2) => c1.start - c2.start)
-console.log(sortedCompanies)
+//console.log(sortedCompanies)
 
 //sort age
 
 sortedAge = ages.sort((a,b) => a-b)
-console.log(sortedAge)
+//console.log(sortedAge)
+
+
+//Reduce Method
+// sum of age
+
+let ageSum = 0
+
+for(let age of ages) {
+
+  ageSum+= age
+}
+console.log(ageSum)
