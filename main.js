@@ -13,5 +13,5 @@ const companies = [
  
   companies.forEach((company) => {
 
-    console.log(company.name)
+    console.log(company.name + " " + company.start)
   })
