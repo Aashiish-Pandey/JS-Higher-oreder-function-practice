@@ -9,7 +9,7 @@ const companies = [
   { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
   { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
 ];
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 100, 32];
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // companies.forEach((company) => {
 
@@ -75,10 +75,18 @@ sortedAge = ages.sort((a,b) => a-b)
 //Reduce Method
 // sum of age
 
-let ageSum = 0
+// let ageSum = 0
 
-for(let age of ages) {
+// for(let age of ages) {
 
-  ageSum+= age
-}
+//   ageSum+= age
+// }
+// console.log(ageSum)
+
+let ageSum = ages.reduce((startValue,arrElmnt) => startValue+arrElmnt,0)
 console.log(ageSum)
+
+// get total Years of all companies  
+
+const totalYears = companies.reduce((startValue,company) => startValue +(company.end-company.start),0 )
+console.log(totalYears)
